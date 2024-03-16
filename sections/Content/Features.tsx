@@ -19,9 +19,9 @@ export interface Props {
 
 function FeatureCard({ icon, title, text }: Card) {
   return (
-    <div class="feature-card group group-hover:-translate-y-3">
+    <div class="feature-card group group-hover:-translate-y-3 bg-primary text-primary-content">
       {icon && (
-        <div class="p-6 rounded-full bg-white text-[#1A1A1A]">
+        <div class="p-6 rounded-full bg-white text-base-content">
           <Icon id={icon} size={48} />
         </div>
       )}
@@ -60,7 +60,7 @@ export default function Features(
   { title = "Feature", cards = DEFAULT_CARDS }: Props,
 ) {
   return (
-    <section class="relative bg-white text-black py-20 max-w-screen">
+    <section class="relative py-20 max-w-screen">
       <div class="mx-6 lg:container lg:mx-auto flex justify-center items-center flex-col gap-20">
         {title && (
           <h2 class="font-medium text-[36px] lg:text-[72px] leading-[100%] text-center max-w-4xl z-10">
